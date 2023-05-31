@@ -34,12 +34,12 @@
         <repository>
             <id>deployment</id>
             <name>student snapshots Releases</name>
-            <url>http://175.41.216.133:8081/repository/studentapp-rel/</url>
+            <url>http://35.78.117.159:8081/repository/student-release/</url>
         </repository>
         <snapshotRepository>
             <id>deployment</id>
             <name>student Snapshot </name>
-            <url>http://175.41.216.133:8081/repository/studentapp-snap/</url>
+            <url>http://35.78.117.159:8081/repository/student-snapshot/</url>
         </snapshotRepository>
     </distributionManagement>
   <properties>
