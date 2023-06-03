@@ -43,19 +43,21 @@ stages{
           
           // Perform other AWS-related commands or actions here
     sh 'aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/k0d1g4g8'
-    sh 'docker build -t ashokrepo .'
-    sh 'docker tag ashokrepo:latest public.ecr.aws/k0d1g4g8/ashokrepo:latest'
-    sh 'docker push public.ecr.aws/k0d1g4g8/ashokrepo:latest'
+    sh 'docker build -t narendhra .'
+    sh 'docker tag narendhra:latest public.ecr.aws/k0d1g4g8/narendhra:latest'
+    sh 'docker push public.ecr.aws/k0d1g4g8/narendhra:latest'
         }
 }
 }
 }
+
 stage(deployECRimageintoECS){
     steps{
         script{
-          sh 'aws ecs update-service --cluster arn:aws:ecs:ap-northeast-1:164506155255:cluster/ashok-cluster --service arn:aws:ecs:ap-northeast-1:164506155255:service/ashok-cluster/ashok-service --force-new-deployment'
+          sh 'aws ecs update-service --cluster arn:aws:ecs:ap-northeast-1:164506155255:cluster/narendhra --service arn:aws:ecs:ap-northeast-1:164506155255:service/narendhra/narendhra-service --force-new-deployment'
         }
     }
 }
+
 }
 }
