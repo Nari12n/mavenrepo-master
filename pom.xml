@@ -48,6 +48,7 @@
     <sonar.login>admin</sonar.login>
     <sonar.password>admin123</sonar.password>
      <sonar.java.binaries>src/</sonar.java.binaries>
+     <connectiontimeout>60000</connectiontimeout>
     </properties>
   <dependencies>
   	<dependency>
